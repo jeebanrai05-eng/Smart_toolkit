@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-premium-blue: #3B82F6;
+  --color-premium-purple: #8B5CF6;
+  --color-premium-dark: #0F172A;
+  --color-premium-card: rgba(30, 41, 59, 0.7);
+}
+
+@layer base {
+  body {
+    @apply bg-premium-dark text-slate-100 font-sans antialiased selection:bg-premium-blue/30;
+    background: radial-gradient(circle at top right, #1e1b4b, #0f172a);
+    min-height: 100vh;
+  }
+}
+
+@utility glass {
+  @apply backdrop-blur-xl bg-white/5 border border-white/10;
+}
+
+@utility glass-card {
+  @apply glass rounded-2xl transition-all duration-300;
+}
+
+@utility gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-premium-blue to-premium-purple;
+}
+
+@utility gradient-bg {
+  @apply bg-gradient-to-r from-premium-blue to-premium-purple;
+}
+
+@utility no-scrollbar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

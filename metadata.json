@@ -1,0 +1,7 @@
+{
+  "name": "Smart Utility Toolkit Pro",
+  "description": "A premium, all-in-one utility suite featuring scientific tools, converters, and smart productivity modules with a modern dark UI.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
